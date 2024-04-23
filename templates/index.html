@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7W3xHFX3CnjqMzYAJmxpc0o1_uKwU8JMM1Q&usqp=CAU'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); 
+            border-radius: 10px;
+            position: relative;
+        }
+        .form-column {
+            float: left;
+            width: 50%;
+        }
+        .clear {
+            clear: both;
+        }
+        .submit-btn {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Heart Disease Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="form-column">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required min="29" max="77"><br><br>
+
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex">
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                </select><br><br>
+
+                <label for="trestbps">Resting Blood Pressure:</label>
+                <input type="number" id="trestbps" name="trestbps" required min="94" max="200"><br><br>
+
+                <label for="chol">Serum Cholesterol: </label>
+                <input type="number" id="chol" name="chol" required min="126" max="564"><br><br>
+
+                <label for="fbs">Fasting Blood Sugar:</label>
+                <select id="fbs" name="fbs">
+                    <option value="0">Less than 120 mg/dl</option>
+                    <option value="1">Greater than or equal to 120 mg/dl</option>
+                </select><br><br>
+
+                <label for="thalach">Maximum Heart Rate Achieved:</label>
+                <input type="number" id="thalach" name="thalach" required min="71" max="202"><br><br>
+
+                <label for="exang">Exercise Induced Angina:</label>
+                <select id="exang" name="exang">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+
+                <label for="oldpeak">ST Depression Induced by Exercise Relative to Rest:</label>
+                <input type="number" id="oldpeak" name="oldpeak" required min="0" max="6.2" step="0.1"><br><br>
+
+
+                <label for="slope">Slope of the Peak Exercise ST Segment:</label>
+                <select id="slope" name="slope" >
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select><br><br>
+
+                
+            </div>
+
+            <div class="form-column">
+
+                
+
+                <label for="ca">Number of Major Vessels Colored by Fluoroscopy:</label>
+                <select id="ca" name="ca" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>  
+                    <option value="4">4</option>          
+                </select><br><br>
+                               
+
+                <label for="cp_1">Chest Pain Type (Typical Angina):</label>
+                <select id="cp_1" name="cp_1">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+
+                <label for="cp_2">Chest Pain Type (Atypical Angina):</label>
+                <select id="cp_2" name="cp_2">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+
+                <label for="cp_3">Chest Pain Type (Non-Anginal Pain):</label>
+                <select id="cp_3" name="cp_3">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+
+                <label for="restecg_1">Resting Electrocardiographic Results (Normal):</label>
+                <select id="restecg_1" name="restecg_1">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+
+                <label for="restecg_2">Resting Electrocardiographic Results (ST-T Wave Abnormality):</label>
+                <select id="restecg_2" name="restecg_2">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+
+                <label for="thal_1">Thalassemia (Normal):</label>
+                <select id="thal_1" name="thal_1">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+
+                <label for="thal_2">Thalassemia (Fixed Defect):</label>
+                <select id="thal_2" name="thal_2">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+
+                <label for="thal_3">Thalassemia (Reversible Defect):</label>
+                <select id="thal_3" name="thal_3">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+            </div>
+
+            <div class="clear"></div>
+
+            <input type="submit" class="submit-btn" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

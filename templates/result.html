@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-image: url('https://www.merillife.com/assets/images/blog/wQe218SrHyI7X0zPfDpW.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); 
+            border-radius: 10px;
+            position: relative;
+        }
+        .input-values {
+            width: 40%;
+            margin: 0 auto;
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        h1, h2, p {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .prediction {
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="input-values">
+            <h2>Input Values:</h2>
+            <ul>
+                {% for key, value in input_values.items() %}
+                <li>{{ key }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="prediction">
+            <h1>Prediction Result:</h1>
+            <h2>{{ prediction_text }}</h2>
+        </div>
+    </div>
+</body>
+</html>
+
+
